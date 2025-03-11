@@ -1,4 +1,3 @@
-using System;
 using Allure.NUnit.Attributes;
 using NorthStandard.Pages;
 using NorthStandard.Utilities;
@@ -64,6 +63,7 @@ namespace NorthStandard.StepDefinitions
             try
             {
                 Assert.That(homePage!.GetPageTitle(), Is.EqualTo(expectedTitle));
+                driver!.Quit();
             }
             catch (Exception ex)
             {
